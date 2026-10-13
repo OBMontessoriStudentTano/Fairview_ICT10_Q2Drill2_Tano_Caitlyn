@@ -23,10 +23,15 @@
     <br><br>
 
     <!--Enter Button-->
-    <button type="button" py-click="enter">Enter</button>
+    <button type="button" py-click="enter">Submit</button>
     <br>
 
-    <div id="output"></div>
+    <p id="message"></p>
+
+    <div id="box" style="display: none;">
+        <h2>List of Members</h2>
+        <div id="members"></div>
+    </div>
 
     <!--Connect the webpage to the Python ordering program-->
     <script type="py" src="main.py"></script>
