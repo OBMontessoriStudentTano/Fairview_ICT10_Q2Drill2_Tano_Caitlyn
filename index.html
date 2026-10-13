@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Q Drill2</title>
+     <link rel="stylesheet" 
+    href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" 
+    src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+    
+    <h1>Add New Club Members</h1>
+    <br>
+
+    <!--Input box for the first name-->
+    <input type="text" id="text1" placeholder="Enter your first name">
+    <br><br>
+
+    <!--Input box for the last name-->
+    <input type="text" id="text2" placeholder="Enter your last name">
+    <br><br>
+
+    <!--Enter Button-->
+    <button type="button" py-click="enter">Enter</button>
+    <br>
+
+    <div id="output"></div>
+
+    <!--Connect the webpage to the Python ordering program-->
+    <script type="py" src="main.py"></script>
+    
+</body>
+</html>
