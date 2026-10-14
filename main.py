@@ -44,7 +44,6 @@ def add_member(first_name, last_name):
     global master_members
 
     new_member = (first_name, last_name)
-
     master_members = master_members | {new_member}
 
     document.querySelector("#message").innerText = ""
