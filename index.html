@@ -8,15 +8,104 @@
     href="https://pyscript.net/releases/2026.7.3/core.css" />
     <script type="module" 
     src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    
+     <style>
+
+        /* Main Webpage */
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url(https://i.pinimg.com/736x/68/46/bd/6846bdb097e410e13c9ffe794c928814.jpg);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Main Checker Box */
+        .add {
+            width: 400px;
+            margin: 80px auto;
+            background-color: bisque;
+            padding: 40px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.15)
+        }
+
+        /* Main Heading */
+        h1 {
+            color: #25301f;
+            margin-bottom: 5px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        /* Subheading */
+        h2 {
+            color: #20301f;
+            font-weight: normal;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        /* Input Box */
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: bisque;
+            border: 1px solid #7af092;
+            border-bottom: 2px solid #aab896;
+            border-radius: 0;
+            font-size: 15px;
+            color: #2a3025
+        }
+
+        /* Input border when selected */
+        input:focus {
+            outline: none;
+            border: 2px solid #6aa332
+        }
+
+        /* Enter button */
+        button {
+            margin-top: 15px;
+            padding: 12px 35px;
+            background-color: #f59fcb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        /* Enter button changes */
+        button:hover {
+            background-color: #a3325d;
+        }
+
+        /* Give the result message*/
+        #output {
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+    </style>
 </head>
 <body>
+
+     <div class="add">
     
-    <h1>Add New Club Members</h1>
+    <h1>Add New Communication Arts Club Members</h1>
     <br>
 
     <!--Input box for the first name-->
     <input type="text" id="text1" placeholder="Enter your first name">
-    <br><br>
+    <br>
 
     <!--Input box for the last name-->
     <input type="text" id="text2" placeholder="Enter your last name">
@@ -31,6 +120,8 @@
     <div id="box" style="display: none;">
         <h2>List of Members</h2>
         <div id="members"></div>
+    </div>
+
     </div>
 
     <!--Connect the webpage to the Python ordering program-->
