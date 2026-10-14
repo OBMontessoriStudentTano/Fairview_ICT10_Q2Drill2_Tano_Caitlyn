@@ -1,4 +1,5 @@
 from pyscript import document
+from html import escape
 
 # Predefined Grade Sets
 grade7 = {
@@ -6,16 +7,19 @@ grade7 = {
     ("Enzo", "Navarro"),
     ("Camille", "Dela Cruz")
 } 
+
 grade8 = {
     ("Vincent", "Villanueva"),
     ("Scarlett", "Santos"),
     ("Theo", "Marasigan")
 }
+
 grade9 = {
     ("Valerie", "Bautista"),
     ("Damian", "Malabanan"),
     ("Vivienne", "Gatdula")
 } 
+
 grade10 = {
     ("Isaiah", "Manansala"), 
     ("Anna", "Dimaculangan")
@@ -43,30 +47,30 @@ def add_member(first_name, last_name):
 
     master_members = master_members | {new_member}
 
-     document.querySelector("#message").innerText = ""
-     document.querySelector("#text1").value = ""
-     document.querySelector("#text2").value = ""
+    document.querySelector("#message").innerText = ""
+    document.querySelector("#text1").value = ""
+    document.querySelector("#text2").value = ""
 
-     show_members()
+    show_members()
 
 def show_error(first_name, last_name):
-    document.querySelector("#message").innerHTML = (
-        "Please enter both your first and last names"
+    document.querySelector("#message").innerText = (
+        "Please enter both your first and last names."
     )
 
 def show_members():
     sorted_members = sorted(
-        master_members, 
+        master_members,
         key=lambda person: (
-            person[0].casefold(), 
-            person[1].casefold()
+            person[1].casefold(), 
+            person[0].casefold()
         )
     )
 
     member_items = "".join(
         map(
             lambda person: (
-                f"<li>{escape(person[0])}"
+                f"<li>{escape(person[0])} "
                 f"{escape(person[1])}</li>"
             ),
             sorted_members
@@ -76,7 +80,7 @@ def show_members():
     document.querySelector("#members").innerHTML = (
         f"<ol>{member_items}</ol>"
         f"<p><strong>Total members: "
-        f"{len(master_members)</strong></p>}"
+        f"{len(master_members)}</strong></p>"
     )
 
     document.querySelector("#box").style.display = "block"
