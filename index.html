@@ -29,7 +29,7 @@
             align-items: center;
         }
 
-        /* Main Checker Box */
+        /* Add New Members Box */
         .add {
             width: 850px;
             max-width: 90%;
@@ -51,7 +51,7 @@
             letter-spacing: 1px;
         }
 
-        /* Subheading */
+        /* Subheading above the member list */
         h2 {
             color: #20301f;
             font-weight: normal;
@@ -61,7 +61,7 @@
             font-size: 16px;
         }
 
-        /* Input Box */
+        /* Input */
         input {
             width: 90%;
             padding: 12px;
@@ -80,7 +80,7 @@
             border: 2px solid #6aa332
         }
 
-        /* Enter button */
+        /* Submit button */
         button {
             margin-top: 15px;
             padding: 12px 35px;
@@ -93,12 +93,12 @@
             letter-spacing: 1px;
         }
 
-        /* Enter button changes */
+        /* Submit button changes color when hovered */
         button:hover {
             background-color: #a3325d;
         }
 
-        /* Give the result message*/
+        /* Give the message */
         #message {
             margin-top: 25px;
             font-size: 16px;
@@ -106,12 +106,14 @@
             line-height: 1.5;
         }
 
+        /* Give the ordered list of members */
         #members {
             text-align: left;
             line-height: 1.8;
             color: #301f28
         }
 
+        /* Displays the total number of members */
         #members p {
             text-align: center;
             margin-top: 20px;
@@ -123,8 +125,10 @@
 </head>
 <body>
 
+    <!--Main container-->
      <div class="add">
     
+    <!--Main title-->
     <h1>Add New Communication Arts Club Members</h1>
     <br>
 
@@ -136,14 +140,20 @@
     <input type="text" id="text2" placeholder="Enter your last name">
     <br><br>
 
-    <!--Enter Button-->
+    <!--Submit Button-->
     <button type="button" py-click="enter">Submit</button>
     <br>
-
+    
+    <!--Error message-->
     <p id="message"></p>
 
+    <!--List of Members-->
     <div id="box" style="display: none;">
+
+        <!--Heading of the list of registered members-->
         <h2>List of Members</h2>
+        
+        <!--Total number of members-->
         <div id="members"></div>
     </div>
 
